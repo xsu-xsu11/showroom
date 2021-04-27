@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=UTF-8 />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" type="text/css" href="./chat.css" />
+</head>
+<body>
+    <div class="interactive">
+        <canvas id="canvas"></canvas>
+    </div>
+    <div class="interview">
+        <div class="menu">
+            <div class="menu__item color"></div>
+            <div class="menu__item service"></div>
+            <div class="menu__item test-drive"></div>
+            <div class="menu__item chat"></div>
+        </div>
+        <div class="description">
+            <div class="description__item color">
+                <div class="item__title">
+                    Цветовая Палитра
+                </div>
+                <div class="color__options">
+                    <div class="color__option red">
+                        <div class="option__title">Красный гиацинт металлик</div>
+                    </div>
+                    <div class="color__option white">
+                        <div class="option__title">Белый бриллиант</div>
+                    </div>
+                    <div class="color__option grey">
+                        <div class="option__title">Серый селенит</div>
+                    </div>
+                    <div class="color__option black">
+                        <div class="option__title">Чёрный обсидиан</div>
+                    </div>
+                    <div class="color__option blueC">
+                        <div class="option__title">Синий кавансит</div>
+                    </div>
+                    <div class="color__option blueM">
+                        <div class="option__title">Синий мистик</div>
+                    </div>
+                    <div class="color__option green">
+                        <div class="option__title">Неметаллик классический зелёный</div>
+                    </div>
+                </div>
+            </div>
+            <div class="description__item service">
+                <div class="item__title">
+                    Опции (Пакеты)
+                </div>
+                <form action="" class="service__form form">
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Пакет Driving Assistance [PC-23P]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Комфорт пакет KEYLESS-GO [PC-P17]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Парковочный пакет вкл. камеру заднего вида [PC-P44]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Система освещения MULTIBEAM LED [PC-P35]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Пакет зеркал [PC-P49]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Парковочный пакет вкл. камеру 360° [PC-P47]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Противоугонный пакет [PC-P54]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Пакет комфортной акустики и звукоизоляции [PC-PAF]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Пониженная комфортная подвеска [SA-677]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Сенсорная панель с контроллером [SA-448]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Беспроводная система зарядки для мобильных устройств [SA-897]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Навигационная система на жестком диске
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Акустическая система объемного звучания 3D Burmester® класса High End [SA-811]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Система мониторинга "слепых зон" [SA-234]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Активный парковочный ассистент [SA-235]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Активная система контроля над полосой движения [SA-243]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Задние подушки безопасности [SA-293]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Защита от проникновения в салон и защита от буксировки [SA-551]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Адаптивные фары дальнего света Plus [SA-628]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Сигнализация проникновения в салон [SA-882]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Система распознавания дорожных знаков [SA-513]
+                    </label>
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox">
+                        Функция "HANDS-FREE ACCESS" [SA-871]
+                    </label>
+                </form>
+                <div class="buttons">
+                    <button class="clearBtn clear-service btn">Сбросить</button>
+                    <button class="submitBtn submit-service btn">Применить</button>
+                </div>
+            </div>
+            <div class="description__item test-drive">
+                <div class="item__title">
+                    Запись на Тест-драйв:
+                </div>
+                <div class="blocked">
+                    <div class="blocked__icon"></div>
+                    <div class="blocked__text">Для записи на тест-драйв определитесь с техническими характеристиками</div>
+                </div>
+                <form class="td__form form form--high" onsubmit="return false;" hidden="true">
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">Личные данные</legend>
+                        <div class="form__field">
+                            <label class="form__label" for="name">Имя</label>
+                            <input class="form__text" type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form__field">
+                            <label class="form__label" for="surname">Фамилия</label>
+                            <input class="form__text" type="text" id="surname" name="surname" required>
+                        </div> 
+                        <div class="form__field">
+                            <label class="form__label" for="phone">Номер телефона</label>
+                            <input class="form__text" type="phone" id="phone" name="phone" required>
+                        </div> 
+                        <div class="form__field">
+                            <label class="form__label" for="email">Электронная почта</label>
+                            <input class="form__text" type="email" id="email" name="email" required>
+                        </div> 
+                        <div class="form__field inline-field">
+                            <label class="form__label" for="license">Водительское удостоверение</label>
+                            <input class="form__checkbox" type="checkbox" id="license" name="license">
+                        </div>
+                    </fieldset> 
+                    <fieldset class="form__fieldset license-fieldset" hidden="true">
+                        <legend class="form__legend">Водительское удостоверение</legend>
+                        <div class="form__field">
+                            <label class="form__label" for="license-number">Номер удостоверения</label>
+                            <input class="form__text" type="text" id="license-number" name="license-number">
+                        </div>
+                        <div class="form__field">
+                            <label class="form__label" for="experience">Стаж</label>
+                            <input class="form__text" type="number" id="experience" name="experience" min=2>
+                        </div> 
+                        <div class="form__info">
+                            *Минимальный стаж 2 года
+                        </div>
+                    </fieldset>  
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">Выбор записи</legend>
+                        <div class="form__field">
+                            <label class="form__label" for="showroom">Шоурум</label>
+                            <select class="form__select" id="showroom" name="showroom" required>
+                                <option value="avilon">Авилон</option>
+                                <option value="avilonLegend">Авилон Легенда</option>
+                                <option value="avilonVozd">Авилон Воздвиженка</option>
+                                <option value="mbRus">Мерседес-Бенц РУС</option>
+                                <option value="mbIzm">МБ Измайлово</option>
+                                <option value="mbBel">МБ Беляево</option>
+                                <option value="lukavto">ЛУКАВТО</option>
+                                <option value="panavto">Панавто</option>
+                                <option value="star">Звезда Столицы</option>
+                            </select>
+                        </div>
+                        <div class="form__field">
+                            <label class="form__label" for="datetime">Дата и время</label>
+                            <input class="form__select" type="datetime-local" id="datetime" name="datetime" required>
+                        </div>                        
+                    </fieldset>
+                    <div class="buttons">
+                        <button class="clearBtn clear-td btn" type="reset">Сбросить</button>
+                        <button class="submitBtn submit-td btn" type="submit" formtarget="#">Записаться</button>
+                    </div>  
+                </form>
+                <div class="success" hidden="true">
+                    <div class="success__icon"></div>
+                    <div class="success__text">Наш менеджер свяжется с вами для подтверждения записи!</div>
+                </div>
+            </div>
+            <div class="description__item chat">
+                <div class="item__title">
+                    Онлайн-консультанция
+                </div>
+                <div id="talkjs-container" style="width: 90%; margin: 30px; height: 425px">
+                    <i>Loading chat...</i>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+<script src="three.js"></script>
+<script src="GLTFLoader.js"></script>
+<script src="OrbitControls.js"></script>
+<script src="resize.js"></script>
+<script src="carFunctions.js"></script>
+<script src="initScene.js"></script>
+<script src="customScroll.js"></script>
+<script>
+    let cars = {};
+    window.onload = async function init() {
+        cars = await loadCars();
+        initScene();
+        addCar(cars.grey, scene);
+        // customScroll.scrollbarAll('.service__form'); // scrollbar initialization
+        // viewActionList();
+        // customScroll.refresh();
+    }
+
+    function makeItemVisible(item) {
+        if (visibleDescrItem) {
+            visibleDescrItem.classList.remove('visible');
+        }
+        visibleDescrItem = item;
+        visibleDescrItem.classList.add('visible');
+    }
+
+    const body = document.querySelector('body');
+    // const menu = document.querySelector('.menu');
+    const interview = document.querySelector('.interview');
+    interview.classList.add('hidden');
+    const description = document.querySelector('.description');
+    const descriptionItems = document.querySelectorAll('.description__item');
+    let visibleDescrItem;
+    
+    //скрыть/показать меню 
+    body.addEventListener('click', (e) => {
+        let target = e.target.closest('.interview');
+        if (!target) {
+            interview.classList.add('hidden');
+        } else {
+            interview.classList.remove('hidden');
+            
+            let menuItem = e.target.closest('.menu__item');
+            if (!menuItem) return;
+
+            const elClass = menuItem.classList[1];
+            descriptionItems.forEach((item) => {
+                if (item.classList.contains(elClass))
+                    makeItemVisible(item); 
+            });
+        }
+    });
+
+
+    function makeOptionSelected(option) {
+        if (selectedColorOption) {
+            selectedColorOption.classList.remove('selected');
+        }
+        selectedColorOption = option;
+        selectedColorOption.classList.add('selected');
+    }
+
+    let activeColor = 'grey';
+    let newColor = '';
+    let selectedColorOption = document.querySelector(`.color__option.${activeColor}`);
+    selectedColorOption.classList.add('selected');
+
+    const colorMenu = document.querySelector('.color__options');
+    const colorOptions = colorMenu.querySelectorAll('.color__option');
+    //выбрать цвет
+    colorMenu.addEventListener('click', (e) => {
+        let selectedColor = e.target.closest('.color__option');
+
+        if (!selectedColor) return;
+        newColor = selectedColor.classList[1];
+
+        makeOptionSelected(selectedColor);
+        changeCar(cars[activeColor], cars[newColor], scene);
+        activeColor = newColor;
+    });  
+    
+    const clearServiceBtn = document.querySelector('.clear-service');
+    const submitServiceBtn = document.querySelector('.submit-service');
+    const serviceForm = document.querySelector('.service__form');
+    let selectedServiceOptions = [];
+
+    const formTd = document.querySelector('.td__form');
+    const successTd = document.querySelector('.success');
+    const blockedTD = document.querySelector('.blocked');
+
+    clearServiceBtn.addEventListener('click', () => {
+        selectedServiceOptions.forEach((option) => {
+            option.parentNode.classList.remove('selected');
+            option.checked = false;
+        });
+        selectedServiceOptions = [];
+        formTd.hidden = true;
+        blockedTD.hidden = false;
+        successTd.hidden = true;
+    });
+
+    submitServiceBtn.addEventListener('click', ()=> {
+        selectedServiceOptions.forEach((option) => {
+            option.parentNode.classList.add('selected');
+        });
+        if (selectedServiceOptions.length>0) {
+            formTd.hidden = false;
+            blockedTD.hidden = true;
+        } else {
+            formTd.hidden = true;
+            blockedTD.hidden = false;
+            successTd.hidden = true;
+        }
+    });
+
+    serviceForm.addEventListener('click', (e) => {
+        let selectedService = e.target.closest('.form__checkbox');
+
+        if (!selectedService) return;
+
+        selectedServiceOptions.push(selectedService);
+    })
+
+    formTd.addEventListener('submit', () => {
+        formTd.hidden = true;
+        successTd.hidden = false;
+    });
+
+    const licenseCheckbox = document.querySelector('#license');
+    const licenseFieldset = document.querySelector('.license-fieldset')
+    licenseCheckbox.addEventListener('change', () => {
+        licenseFieldset.hidden = !licenseFieldset.hidden;
+    });
+
+</script>
+<script>
+    (function(t,a,l,k,j,s){
+    s=a.createElement('script');
+    s.async=1;
+    s.src="https://cdn.talkjs.com/talk.js";
+    a.head.appendChild(s);
+    k=t.Promise;
+    t.Talk={
+        v:3,
+        ready: {
+            then:function(f){
+                if(k)return new k(function(r,e){l.push([f,r,e])});
+                l.push([f]);
+            },
+            catch:function(){return k&&new k()},c:l
+        }
+    };
+    })(window,document,[]);
+
+    Talk.ready.then(function() {
+    var me = new Talk.User({
+        id: "123457",
+        name: "User",
+        email: "parinova.kseniya@mail.ru",
+        photoUrl: "./pict/boy.svg",
+        welcomeMessage: "Привет"
+    });
+    window.talkSession = new Talk.Session({
+        appId: "tkflwN3q",
+        me: me
+    });
+    var other = new Talk.User({
+        id: "654321",
+        name: "Алиса",
+        email: "ks.parinova13@mail.ru",
+        photoUrl: "./pict/girl.svg",
+        welcomeMessage: "Добрый день! Я ваш виртуальный консультант. Чем я могу вам помочь?"
+    });
+    var conversation = talkSession.getOrCreateConversation(`${Math.random(10000000000)}`);
+    conversation.setParticipant(me);
+    conversation.setParticipant(other);
+
+    var inbox = talkSession.createInbox({selected: conversation});
+    inbox.mount(document.getElementById("talkjs-container"));
+
+    // console.log(document.querySelector('.chatbox a'));
+});
+</script>
+
+</body>
+</html>
